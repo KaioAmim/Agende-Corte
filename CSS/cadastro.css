@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "fonteCadastro";
+  src: url('../fonte/fonteCadastro.woff2') format('woff2'),
+       url('../fonte/fonteCadastro.woff') format('woff'),
+       url('../fonte/fonteCadastro.ttf') format('truetype'),
+       url('../fonte/fonteCadastro.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "fonteInput";
+  src: url('../fonte/fonteInput.woff2') format('woff2'),
+       url('../fonte/fonteInput.woff') format('woff'),
+       url('../fonte/fonteInput.ttf') format('truetype'),
+       url('../fonte/fonteInput.otf') format('opentype');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position:relative;
+  background-image: url('../images/Bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.formulario{
+  background: rgb(10, 10, 10) ;
+  border-radius: 10px;
+  width: 400px;
+  padding: 40px;
+}
+
+.formulario h2{
+  margin-bottom: 30px;
+  font-size: 30px;
+  color:#fff;
+  text-align: center;
+}
+.formulario .box-user{
+  position:relative;
+}
+.formulario .box-user input{
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.formulario .box-user label{
+  position: absolute;
+  top:0;
+  left: 0;
+  padding:10px 0;
+  color:#fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.formulario .box-user input:focus~label,
+.formulario .box-user input:valid~label{
+  top:-20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.forget{
+  font-size:11px;
+  color:#5b6b8b;
+  float: right;
+}
+
+.w3-btn{
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 5px;
+  color: white;
+  background-color: #172031;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: .5s;
+  top:20px;
+  bottom:10px;
+  left:35px;
+  
+}
+.w3-btn:hover{
+  background: #03e9f4;
+  border-radius: 5px;
+  color: #172031;
+}
+
+@media(max-width:405px){
+  .formulario{
+    width: 90%;
+  }
+}
+
+.a{
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: .5s;
+  top:30px;
+  bottom:10px;
+  left:35px;
+}
+
+.field-group{
+  position:relative;
+}
+
+.input-field{
+  width:100%;
+  outline:0;
+  border: 2px solid #999999;
+  border-radius:3px;
+  padding:10px;
+  background: transparent;
+  font-size: 2em;
+  color:#999999;
+}
+
+.input-field::placeholder{
+  color:#999999;
+}
+.icon{
+  position: absolute;
+  margin-right: 10px;
+  left: -20px;
+  right: 1px;
+  top: 20px;
+  width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 1.6em;
+}
+.input-field:focus{
+  color: #ffffff;
+  border-color:#ffffff;
+}
+.input-field:focus ~ .icon{
+  color: aqua;
+}
+
+#icon{
+  position:absolute;
+  top:30%;
+  left:270px;
+  transform: translateY(-50%);
+  background: url('../images/olho-fechado.png');
+  background-size: cover;
+  width:20px;
+  height: 20px;
+  cursor:pointer;
+
+}
+
+#icon.hide{
+  background: url('../images/olho-aberto.png');
+  background-size: cover;
+}
+
+@keyframes opacity-out {
+  from {opacity: 1;}
+  to {opacity: 0.4;}
+}
+
+.cartao {
+	position:relative;
+	z-index: 0;
+  padding: 3rem 3rem 0 3rem;
+	width: 100%;
+  height: 100%;
+	max-width: 400px;
+	min-height: 470px;
+}

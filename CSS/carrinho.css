@@ -1,0 +1,861 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: #24282f;
+  font-family: 'Lato', sans-serif;
+}
+
+
+body > main {
+  background:linear-gradient(0deg,#24282f,#000);
+  padding: 30px 30px 30px;
+}
+
+body > main .page-title {
+  font-size: 40px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+body > main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > main .content section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body > main .content aside {
+  min-width: 250px;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  border-bottom: 3px solid rgb(80,80,80);
+}
+.cart-count {
+  position: absolute;
+  top: 5px;
+  right: -9px;
+  background-color: #1E90FF;
+  color: white;
+  border-radius: 100%;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+table thead tr th {
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: rgba(167, 167, 167, 0.667);
+}
+
+table tbody tr {
+  border-bottom: 3px solid rgb(80, 80, 80)
+}
+
+table tbody tr:last-child {
+  border: 0;
+}
+
+table tbody tr td {
+  padding: 30px 0;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product img {
+  border-radius: 6px;
+}
+
+.product .info {
+  margin-left: 20px;
+}
+
+.product .info .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .info .category {
+  color: #bbb;
+}
+
+.qty {
+  background: #eee;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.qty span {
+  margin: 0 10px;
+}
+
+.qty button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0 10px;
+  font-size: 20px;
+  height: 100%;
+}
+
+.qty button:hover {
+  background: #ccc;
+}
+
+.remove {
+  background: #eee;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+}
+
+.remove:hover {
+  background: #ff9595;
+}
+
+aside {
+  margin-left: 30px;
+}
+
+aside .box {
+  margin-bottom: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  background: #4a4a4a;
+  color: #ffffff;
+}
+
+aside .box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+aside .box .info {
+  padding: 20px;
+  font-size: 16px;
+}
+
+aside .box .info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  color: #a0a0a0;
+}
+
+aside .box .info > div:last-child {
+  margin: 0;
+}
+
+aside    .box .info button {
+  color: #28a745;
+  background: transparent;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+aside .box footer {
+  padding: 15px 20px;
+  background: #3b3b3b;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+aside > button {
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background: #1E90FF;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+aside > button:hover {
+  background: #0e5194;
+}
+/*# sourceMappingURL=styles.css.map */
+
+/*BARRA DE NAVEGAÇÃO */
+.menu{
+  height: 60px;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  top:0;
+  padding: 2%;
+  justify-content: center;
+  position: sticky;
+  align-items: center;
+}
+
+
+a{
+  position:relative;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-decoration:none;
+  border-color: white;
+  text-transform: uppercase;
+  font-family: 'Poopins', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+/*DEIXAR O MENU COM O RISCO ABAIXO DELE AO PASSAR O MOUSE(CORTES,PACOTES,AGENDA E CONTATO)*/
+.itensMenu {
+position: relative;
+text-decoration: none;
+border-color: white;
+text-transform: uppercase;
+font-family: 'Poopins', sans-serif;
+color: rgb(255, 255, 255);
+font-size: 16px;
+display: flex;
+letter-spacing: 0.8px;
+}
+
+
+.itensMenu:after {
+content: "";
+position: absolute;
+background-color: #1E90FF;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+a:hover{
+  color: #1E90FF;
+}
+
+
+a:hover:after{
+  width: 100%;
+}
+
+#navbar {
+overflow: hidden;
+z-index: 1;
+height: 60px;
+background-color: black;
+width: 100%;
+display: flex;
+top: 0;
+width: 100%;
+padding: 2%;
+justify-content: space-between;
+position: sticky;
+align-items: center;
+}
+
+
+#navbar a {
+text-decoration: none;
+border-color: white;
+text-transform: uppercase;
+font-family: 'Poopins', sans-serif;
+color: rgb(255, 255, 255);
+font-size: 16px;
+letter-spacing: 0.8px;
+}
+
+#navbar a:hover {
+color: #1E90FF;
+}
+
+.right-icons {
+  display: flex;
+  gap: 45px; /* Reduz o espaço entre os ícones */
+  align-items: center;
+}
+
+
+.right-icons a {
+margin: 0;
+}
+
+.left-icons {
+  display: flex;
+  gap: 45px; /* Reduz o espaço entre os ícones */
+  align-items: center;
+}
+
+
+.left-icons a {
+margin: 0;
+}
+.content {
+padding: 16px;
+}
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.sticky + .content {
+padding-top: 60px;
+}
+
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+  transition: 2s;
+}
+
+.user-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%; /* Ajusta a posição vertical abaixo do ícone */
+  left: 0;   /* Ajusta a posição horizontal */
+}
+
+.user-menu .dropdown-content a {
+  color: black;
+  margin: 0px;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  padding: 15px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.user-menu .dropdown-content a:hover {
+  background-color: #1e90ff;
+}
+
+.user-menu:hover .dropdown-content {
+  display: block;
+}
+/* Estilos para telas menores, como celulares (largura máxima de 600px) */
+/* Ajustes adicionais para telas pequenas */
+@media only screen and (max-width: 600px) {
+  
+  /* Ajusta o tamanho da imagem do produto */
+  .product img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Reduz o espaçamento ao redor do resumo da compra */
+  aside .box {
+    margin: 10px 0;
+  }
+  
+  /* Ajusta o tamanho da fonte no resumo da compra */
+  aside .box .info {
+    font-size: 14px;
+  }
+
+  /* Botão de finalizar compra mais compacto */
+  aside > button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* Tabela de produtos e resumo mais compactos */
+  table tbody tr td {
+    padding: 10px 0;
+   
+  }
+  table{
+    margin:-50px;
+  }
+  /* Reduzindo o espaço geral do conteúdo */
+  body > main .content {
+    padding: 15px;
+  }
+  
+  /* Espaçamento mais compacto entre ícones */
+  .right-icons, .left-icons {
+    gap: 20px;
+  }
+}
+
+/* Estilos para tablets (largura máxima de 768px) */
+@media only screen and (max-width: 768px) {
+  body > main .page-title {
+    font-size: 30px;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  body > main .content {
+    flex-direction: column;
+    padding:40px auto;
+  }
+
+  body > main .content aside {
+    min-width: 100%;
+    margin-left: 0;
+  }
+
+  table thead tr th, table tbody tr td {
+    font-size: 11px;
+    padding: 10px 20px;
+    margin:auto;
+  }
+  .product img{
+    width: 100px;
+    align-items: center;
+    height: 120px;
+  }
+  .product .info .name {
+    font-size: 10px;
+  }
+
+  .qty {
+    min-width: 100px;
+    width: 80px;
+    text-align: center;
+    height: 25px;
+    font-size: 10px;
+    margin-left:-30px;
+    margin-right:-30px;
+  }
+
+  .remove {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+
+  aside .box, aside > button {
+    font-size: 11px;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 935px){
+  /* MENU */
+.menu {
+  font-size: 10px;
+  width:100%;
+}
+.menu a{
+  text-decoration:none;
+  font-size:12px;
+  text-align:left;
+  margin:10px;
+  width:100%;
+}
+.icones-direita{
+  display:flex;
+  text-align:center;
+  padding:10px;
+  margin:20px;
+}
+.icones-direita .carrinho{
+  font-size:10px;
+  text-align:center;
+  padding:auto;
+  margin:auto;
+}
+
+.itensMenu {
+  font-size: 10px;
+  text-decoration:none;
+}
+.itensMenu:after {
+height: 1px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+a:hover:after{
+  width: 70%;
+}   
+.user-menu{
+display:flex;
+padding: 5px;
+margin:0px;
+}
+.user-menu .dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 100px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+top: 100%; /* Ajusta a posição vertical abaixo do ícone */
+left: -100%;   /* Ajusta a posição horizontal */
+}
+
+/*FIM MENU*/
+}
+
+@media only screen and (max-width: 768px){
+  /*CARTAO*/
+  .cartao h2{
+    padding:20px;
+    font-size:20px;
+}
+.main {
+width: 100%; /* Ajustar para ocupar toda a largura da tela em dispositivos móveis */
+margin: 10px auto;
+display: flex;
+flex-wrap: wrap; /* Permite que os cards quebrem de linha em telas menores */
+justify-content: center; /* Centraliza os cards */
+gap: 20px; /* Espaçamento entre os cards */
+}
+
+.card {
+    width: 100%; /* Largura total em dispositivos móveis */
+    max-width: 300px; /* Define uma largura máxima para cards em telas maiores */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    font-size: 12px;
+    background-color:rgb(100, 100, 100);
+    padding: 20px; /* Espaçamento interno para dar mais respiro ao conteúdo */
+    border-radius: 10px; /* Arredondar cantos dos cards */
+}
+.card:hover{
+    Cursor:none;
+    Text-Decoration: None !important; 
+}
+.card p{
+    font-size:12px;
+}
+.card img {
+    width: 60%;
+    height: auto;
+}
+.textbutton {
+    font-size: 14px; /* Aumenta o tamanho da fonte para os botões */
+    text-align:center;
+    margin:auto;
+}
+.button{
+    width:160px;
+    margin:auto;
+    text-align:center;
+}
+
+}
+
+@media only screen and (max-width: 935px){
+  /* MENU */
+.menu {
+  font-size: 10px;
+  width:100%;
+}
+.menu a{
+  text-decoration:none;
+  font-size:12px;
+  text-align:left;
+  margin:10px;
+  width:100%;
+}
+.icones-direita{
+  display:flex;
+  text-align:center;
+  padding:10px;
+  margin:20px;
+}
+.icones-direita .carrinho{
+  font-size:10px;
+  text-align:center;
+  padding:auto;
+  margin:auto;
+}
+
+.itensMenu {
+  font-size: 10px;
+  text-decoration:none;
+}
+.itensMenu:after {
+height: 1px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+a:hover:after{
+  width: 70%;
+}   
+.user-menu{
+display:flex;
+padding: 5px;
+margin:0px;
+}
+.user-menu .dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 100px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+top: 100%; /* Ajusta a posição vertical abaixo do ícone */
+left: -100%;   /* Ajusta a posição horizontal */
+}
+
+/*FIM MENU*/
+
+  .testimonials-section img{
+    display: none;
+  }
+    footer{
+      background-color: #26272b;
+      }
+
+      footer .divisao{
+      display: flex;
+      color: #737373;
+      }
+
+      footer .divisao ul{
+      width: 30%;
+      margin-left:10px;
+      margin-right:10px;
+      }
+
+      footer .divisao h3{
+      color: white;
+      margin-top:50px;
+      margin-bottom: 16px;
+      font-size:16px;
+      font-weight: 600;
+      text-align: center;
+      }
+
+      footer .divisao p{
+      margin-bottom: 8px;
+      font-size:8px;
+      }
+      footer .direitos{
+      text-align: right;
+      color:#737373;
+      font-size:8px;
+      margin-top:5px;
+      margin-bottom:10px;
+      }
+      footer .sublinhado-footer{
+      margin:auto;
+      margin-top:15px;
+      width:80%
+      }
+      footer .divisao .redes-sociais svg
+      {
+      width:30px;
+      height:30px;
+      line-height:50px;
+      margin-left: auto;
+      margin-right:0;
+      border-radius:100%;
+      background-color:#33353d;
+      text-align:center;
+      }
+}
+@media only screen and (max-width: 480px) {
+  /* MENU */
+  .menu a{
+      text-decoration:none;
+      flex-direction: row;
+      font-size:10px;
+      text-align:left;
+      margin:10px;
+      width:100%;
+  }
+  .icones-direita{
+      display:flex;
+      text-align:center;
+      padding:10px;
+      margin:10px;
+  }
+  .icones-direita .carrinho{
+      font-size:10px;
+      text-align:center;
+      padding:auto;
+      margin:auto;
+  }
+
+  .itensMenu {
+      font-size: 10px;
+      text-decoration:none;
+  }
+  .itensMenu:after {
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+  }
+
+  a:hover:after{
+      width: 70%;
+  }   
+.user-menu{
+  display:flex;
+  padding: 5px;
+  margin:0px;
+}
+.user-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%; /* Ajusta a posição vertical abaixo do ícone */
+  left: -100%;   /* Ajusta a posição horizontal */
+  }
+
+  /*FIM MENU*/
+}
+
+
+/* Ajustes gerais para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  
+  /* Certifica que o contêiner de produto não ultrapasse a largura da tela */
+  .product {
+    display: flex;
+    flex-direction: column; /* Muda a direção do layout para coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 100%; /* Garante que o produto ocupe toda a largura */
+    padding: 10px 0;
+  }
+  
+  /* Ajusta a imagem do produto para não estourar */
+  .product img {
+    max-width: 80px; /* Limita o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 10px; /* Espaço entre imagem e descrição */
+  }
+  
+  /* Centraliza e ajusta o texto da descrição do produto */
+  .product .info {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Ajusta o contêiner do nome e preço para centralizar e não quebrar */
+  .product .info .name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Certifica que o preço e quantidade fiquem corretamente alinhados */
+  .product .info .price, .product .info .qty {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  /* Ajusta o botão de remover produto */
+  .product .remove {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Ajusta a tabela de produtos e o contêiner geral */
+  table {
+    width: 100%; /* Garante que a tabela não quebre o layout */
+    margin-bottom: 15px;
+  }
+
+  /* Ajusta as células da tabela para caberem melhor */
+  table tbody tr td {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Ajusta a tabela de resumo */
+  aside .box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  aside > button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

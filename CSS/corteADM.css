@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #24282f;
+    background-size: 100%;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+.borda{
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.pontilhado {
+    border-right-style: dashed;
+    color: rgb(156, 156, 156);
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+.w3-btn{
+    background-color: #24282f;
+}
+.card{
+    margin: 30px;
+    width: 310px;
+    border-radius: 10px;
+    height: 410px;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba( #000, .8 );
+    background-color:  rgb(109, 109, 109);
+}
+
+.card>img{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.menu{
+    height: 60px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    top:0;
+    padding: 2%;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+}
+
+
+a{
+    position:relative;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-decoration:none;
+    border-color: white;
+    text-transform: uppercase;
+    font-family: 'Poopins', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #1E90FF;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+
+a:hover{
+    color: #1E90FF;
+}
+
+
+a:hover:after{
+    width: 100%;
+}
+
+
+.border {
+  letter-spacing: 0.03em;
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  font-weight: 700px;
+  font-size: 350px;
+	place-items: center;
+  word-break: break-all;
+	min-height: 200px;
+  margin: 10% 0 50px;
+  text-transform: uppercase;
+	border: 8px solid;
+}
+
+
+
+
+.text {
+  min-height: 200px;
+	display:inline-block;
+	position:relative;
+  font-weight: 700px;
+  font-size: 350px;
+  letter-spacing: 0.03em;
+  padding: 0.2em 0.5em;
+	text-align:center;  
+	border:8px solid transparent;
+  border-bottom:8px solid transparent;
+	/*   border-bottom:2px solid #000; */
+	border-image: linear-gradient(20deg, #ffffff 40%, transparent 0% 60%, #1E90FF 0) 2;
+}
+
+
+
+
+
+
+
+/* Regras de mídia para tornar o site responsivo */
+
+@media only screen and (max-width: 768px) {
+    .container {
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 10px;
+    }
+    
+    .faq-list {
+      font-size: 18px;
+    }
+    
+    .faq-question {
+      padding: 15px;
+    }
+    
+    .faq-answer>div {
+      padding: 20px;
+    }
+    
+    .footer {
+      padding: 2rem 0;
+    }
+  }
+  
+/* sublinhado */
+.sublinhado {
+  border-inline-start: 3px solid;
+  border-block-start: 3px solid;
+  border-image-source: radial-gradient(circle at center,#1E90FF, transparent 50%);
+  border-image-slice:1;
+  padding:10px;
+}
